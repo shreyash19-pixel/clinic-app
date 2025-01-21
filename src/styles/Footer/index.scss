@@ -1,0 +1,65 @@
+@import '../fonts';
+@import '../colors';
+
+
+.footer{
+    background-color: #e9f7f7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 100px;
+
+
+    &__linksWrap{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .--para{
+                padding-left: 28px;
+            }
+
+            .--links{
+                margin-top: 30px;
+            }
+
+            &Heading{
+                color: $c-blue;
+                @include font__medium20;
+            }
+
+            &Links{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                a{
+                    @include font_regular17;
+                    transition: all .3s;
+
+                    &:hover{
+
+                        color: $c-blue;
+                    }
+                }
+
+                p{
+                    width: 100%;
+                    max-width: 480px;
+                    @include font_medium17;
+                }
+
+                img + p + p{
+                    padding-left: 24px;
+                }
+            }
+        }
+
+    }
+}
