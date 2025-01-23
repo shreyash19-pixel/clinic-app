@@ -1,0 +1,45 @@
+@import '../fonts';
+@import '../colors';
+
+.navbar{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 20px 0;
+    position: relative;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &__left{
+        &-logo{
+            @include font_medium40;
+            width: 140px;
+            height: auto;
+        }
+    }
+
+    &__mid{
+        &-list{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            &-links{
+                @include font_medium17;
+                color: $c-white;
+
+                &:hover{
+                    color: $c-blue;
+                    transition: all .2s;
+                }
+            }
+        }
+
+    }
+}

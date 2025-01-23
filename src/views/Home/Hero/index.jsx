@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../../../styles/_main.scss';
-import '../../../styles/Home/Nav/index.scss';
-import Logo from '../../../assets/logo.png';
+import '../../../styles/Home/Hero/index.scss';
 import RightArrow from '../../../assets/icon_rightArrow.svg';
 import axios from 'axios'
+import { AppContext } from '../../../ContextApi/AppContext';
+import Nav from '../../../components/Nav'
 
-const Nav = () => {
+const Hero = () => {
   const [formData, setFormData] = useState({
     name: '',
     number: '',
@@ -14,6 +15,8 @@ const Nav = () => {
   });
 
   const [errors, setErrors] = useState({});
+  
+  const {data, setData} = useContext(AppContext)
 
   const validateField = (id, value) => {
     switch (id) {
@@ -72,6 +75,10 @@ const Nav = () => {
     }
   };
 
+  
+
+  console.log(data);
+
   const postData = async () => {
     try {
       const response = await axios.post("http://localhost:8000/api/contact", formData)
@@ -93,40 +100,7 @@ return (
   <div className='navbar-hero'>
     {/* Navbar */}
     <span className='black-layer'></span>
-    <nav className='navbar'>
-      <div className='navbar__left'>
-        <img className='navbar__left-logo' src={Logo} alt='Logo' />
-      </div>
-      <ul className='navbar__mid'>
-        <li className='navbar__mid-list'>
-          <a className='navbar__mid-list-links' href='#'>
-            Home
-          </a>
-          <a className='navbar__mid-list-links' href='#'>
-            About us
-          </a>
-          <a className='navbar__mid-list-links' href='#'>
-            Services
-          </a>
-          <a className='navbar__mid-list-links' href='#'>
-            Pages
-          </a>
-          <a className='navbar__mid-list-links' href='#'>
-            Blog
-          </a>
-        </li>
-      </ul>
-      <a href='#' className='c-btn arrow-anim animHover'>
-        <span className='c-btn_text'>Contact us</span>
-        <img
-          className='c-btn_icon'
-          width={18}
-          height={18}
-          src={RightArrow}
-          alt='right-arrow'
-        />
-      </a>
-    </nav>
+    <Nav />
 
     {/* Hero Section */}
     <section className='hero'>
@@ -229,4 +203,4 @@ return (
 );
 };
 
-export default Nav;
+export default Hero;

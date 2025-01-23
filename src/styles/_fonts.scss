@@ -1,6 +1,11 @@
 
 
 
+@mixin font_medium60{
+    font-size: 60px;
+    font-weight: 700;
+}
+
 @mixin font_medium56{
     font-size: 56px;
     font-weight: 700;
