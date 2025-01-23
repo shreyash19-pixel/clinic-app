@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Services/index.scss";
 import ServicesImg from "../../assets/Services/lowerLimb.jpeg";
 import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
 
 const Team = () => {
   // Array of services data
@@ -94,6 +95,7 @@ const Team = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </section>
   );
 };

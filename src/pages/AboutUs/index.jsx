@@ -4,6 +4,7 @@ import DirectorPhoto1 from "../../assets/AboutUs/Director.jpg"; // Replace with 
 import DirectorPhoto2 from "../../assets/AboutUs/Director.jpg";
 import DirectorPhoto3 from "../../assets/AboutUs/Director.jpg";
 import Nav from "../../components/Nav";
+import Footer from '../../components/Footer'
 
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -86,6 +87,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
