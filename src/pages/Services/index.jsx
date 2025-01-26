@@ -107,7 +107,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-        {showModal && (<div className="services__modalWrap">
+        {showModal && (<div className="army__modalWrap">
           <Form visible={true} setShowModal={setShowModal} />
         </div>)}
       </section>
