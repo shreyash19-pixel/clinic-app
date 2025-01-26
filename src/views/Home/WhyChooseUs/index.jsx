@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../../../styles/_main.scss";
 import "../../../styles/Home/WhyChooseUs/index.scss";
-
+import DoctorImg from '../../../assets/Home/WhyChooseUs/choose-us.jpg'
 import { FaStethoscope } from "react-icons/fa";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { FaHeartPulse } from "react-icons/fa6";
 import { MdHealthAndSafety } from "react-icons/md";
+
 
 const WhyChooseUs = () => {
   const data = [
@@ -43,35 +44,39 @@ const WhyChooseUs = () => {
 
   return (
     <section className="whyChooseUs">
-      <div className="whyChooseUs__headingWrap">
-        <h2 className="whyChooseUs__headingWrap-heading">Why Choose Us</h2>
-        <p className="whyChooseUs__headingWrap-subheading">
-          As we look forward, our core values of integrity, compassion, and
-          excellence shall continue to guide us. Our vision is to make continual
-          services improvements, and grow our reach, while constantly making use
-          of the advancing technology to attain the changing needs of our
-          customers.
-        </p>
+      <h2 className="whyChooseUs__heading">Why Choose Us</h2>
+      <p className="whyChooseUs__subheading">
+
+        As we look forward, our core values of integrity, compassion, and excellence shall continue to guide us. Our vision is to make continual services improvements, and grow our reach, while constantly making use of the advancing technology to attain the changing needs of our customers.
+      </p>
+      <div className="whyChooseUs__infoWrap">
+        <div className="whyChooseUs__infoWrap-lhs">
+          <img src={DoctorImg} alt="doctor" className="whyChooseUs__infoWrap-lhs-img" />
+          <p className="whyChooseUs__infoWrap-lhs-designation">Warm regards,<br />
+            Dr. Kuldeep Kar,<br/>
+            Chief of Clinical Service(Patient Care),<br  />
+            P&O International Pvt. Ltd.</p>
+        </div>
+        <div className="whyChooseUs__descWrap ">
+          {data.map((val, i) => (
+            <div
+              className={`whyChooseUs__descWrap-card ${showDesc === i ? "showDesc" : ""
+                }`}
+              key={i}
+              onClick={() => handleCards(i)}
+            >
+              <div className="whyChooseUs__descWrap-cardLogo">{val.icon}</div>
+              <h3 className="whyChooseUs__descWrap-cardHeading">{val.heading}</h3>
+              {showDesc === i && (
+                <p className="whyChooseUs__descWrap-cardSubheading">
+                  {val.subheading}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="whyChooseUs__descWrap ">
-        {data.map((val, i) => (
-          <div
-            className={`whyChooseUs__descWrap-card ${
-              showDesc === i ? "showDesc" : ""
-            }`}
-            key={i}
-            onClick={() => handleCards(i)}
-          >
-            <div className="whyChooseUs__descWrap-cardLogo">{val.icon}</div>
-            <h3 className="whyChooseUs__descWrap-cardHeading">{val.heading}</h3>
-            {showDesc === i && (
-              <p className="whyChooseUs__descWrap-cardSubheading">
-                {val.subheading}
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+
     </section>
   );
 };

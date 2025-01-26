@@ -17,6 +17,11 @@
     font-weight: 500;
 }
 
+@mixin font__medium36{
+    font-size: 36px;
+    font-weight: 500;
+}
+
 
 @mixin font__medium24{
     font-size: 24px;

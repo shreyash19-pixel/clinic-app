@@ -5,8 +5,10 @@ import Admin from './pages/Admin'
 import { AppContext } from './ContextApi/AppContext';
 import { useState, useEffect } from 'react';
 import axios from 'axios' 
+import Photos from './pages/Photos';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -46,8 +48,10 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/admin" element= {<Admin />} />
+            <Route exact path="/photos" element= {<Photos />} />
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route exact path="/services" element={<Services/>} />
+            <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>

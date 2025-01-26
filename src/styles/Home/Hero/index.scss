@@ -25,7 +25,7 @@
     width: 100%;
     max-width: 1310px;
     margin: 0 auto;
-    padding: 145px 24px 80px 24px;
+    padding: 80px 24px 80px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,66 +52,5 @@
 
     }
 
-
-    .c-form{
-        background-color: $c-white;
-        padding: 40px 30px;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        max-width: 460px;
-
-        &__heading{
-            color: $c-blue;
-            @include font__medium24;
-        }
-
-        &__inputWrap{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            min-height: 66px;
-        }
-
-        &__input,  &__select, &__textarea{
-            border: 1px solid $c-blue;
-            padding: 10px 12px;
-        }
-
-        &__textarea{
-            scrollbar-width: none;
-        }
-
-        .-textarea
-        {
-            min-height: 86px;
-        }
-
-        &__select{
-           cursor: pointer;
-        }
-
-        &__error{
-            color: $c-red;
-            @include font_regular13;
-        }
-
-        &__btn{
-            background-color: $c-blue;
-            color: $c-white;
-            padding: 12px;
-            border-radius: 4px;
-            transition: all .3s;
-
-            &:hover{
-                background-color: #138f76;
-                cursor: pointer;
-            }
-        }
-
-    }
 
 }

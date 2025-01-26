@@ -1,31 +1,31 @@
 import React from "react";
 import "../../styles/Services/index.scss";
 import ServicesImg from "../../assets/Services/lowerLimb.jpeg";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import Nav from '../../components/Nav'
+import Footer from '../../components/Footer'
 
-const Team = () => {
+const Services = () => {
   // Array of services data
   const services = [
     {
       id: 1,
       name: "Prosthesis for Lower Limb",
       description:
-        "Losing a limb can be a life-changing experience, but it shouldn't limit your ability to live a fulfilling and active life. Mobility, independence, and confidence.",
+        "Losing a limb can be a life-changing experience, but it shouldn't limit your ability to live a fulfilling and active life. At P&O International, we commit ourselves to providing advanced lower limb prosthetic solutions to empower individuals to regain mobility, independence, and confidence",
       imgSrc: ServicesImg,
     },
     {
       id: 2,
       name: "Advanced Prosthetics",
       description:
-        "Advanced prosthetics to enhance mobility and improve your quality of life.",
+        "The loss of an upper limb can be a real challenge, challenging both daily activities and the quality of life. P&O International is committed to offering advanced solutions for upper limb prosthetics in terms of functionality, independence, and confidence.",
       imgSrc: ServicesImg,
     },
     {
       id: 3,
-      name: "Custom Orthotics",
+      name: "Cosmetic Restoration",
       description:
-        "Custom orthotics designed to meet your specific needs for comfort and support.",
+        "At P&O International, we understand the profound impact that physical appearance can have on a person’s self-esteem and overall well-being. Our Cosmetic Restoration service is dedicated to restoring the natural look and function of body parts that may have been lost due to injury, illness, or congenital conditions.",
       imgSrc: ServicesImg,
     },
     {
@@ -73,31 +73,34 @@ const Team = () => {
   ];
 
   return (
-    <section className="team">
+    <div>
       <Nav />
-      <div className="team__peopleWrap">
-        {services.map((service) => (
-          <div className="team__peopleWrap-infoCard" key={service.id}>
-            <img
-              src={service.imgSrc}
-              alt={service.name}
-              className="team__peopleWrap-infoCard-img"
-            />
-            <div className="team__peopleWrap-infoCard-detailsWrap">
-              <h3 className="team__peopleWrap-infoCard-detailsWrap-name">
-                {service.name}
-              </h3>
-              <p className="team__peopleWrap-infoCard-detailsWrap-designation">
-                {service.description}
-              </p>
+      <section className="services">
+        <h1 className="services__title">Our Services</h1>
+        <p className="services__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus, placeat cumque quasi qui, saepe eius incidunt modi repellendus consequuntur blanditiis expedita ipsa perferendis voluptatum veritatis sapiente, fugit quos tenetur.
+        </p>
+        <div className="services__content">
+          {services.map((service) => (
+            <div className="services__card" key={service.id}>
+              <div className="services__card-image">
+                <img
+                  src={service.imgSrc}
+                  alt={service.name}
+                  className="services__card-img"
+                />
+              </div>
+              <div className="services__card-description">
+                <h3 className="services__card-description-title">{service.name}</h3>
+                <p className="services__card-description-text">{service.description}</p>
+                <button className="services__card-description-btn">Book Now</button>
+              </div>
             </div>
-            <button className="team__peopleWrap-infoCard-btn">Book Now</button>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
       <Footer />
-    </section>
+    </div>
   );
 };
 
-export default Team;
+export default Services;

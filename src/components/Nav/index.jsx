@@ -18,11 +18,14 @@ const Nav = () => {
                     <a className='navbar__mid-list-links' href='/about-us'>
                         About us
                     </a>
-                    <a className='navbar__mid-list-links' href='services'>
+                    <a className='navbar__mid-list-links' href='/services'>
                         Services
                     </a>
-                    <a className='navbar__mid-list-links' href='#'>
-                        Blog
+                    <a className='navbar__mid-list-links' href='/contact'>
+                        Contact Us
+                    </a>
+                    <a className='navbar__mid-list-links' href='/photos'>
+                        Photos
                     </a>
                     <a href={Brochure} className='navbar__mid-list-links' download>brochure</a>
                 </li>
