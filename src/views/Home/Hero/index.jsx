@@ -26,7 +26,7 @@ return (
           patient-centered approach, we're dedicated to your well-being. Trust
           us with your health and experience the difference.
         </p>
-        <a href='#' className='c-btn hero__desc-btn arrow-anim animHover'>
+        <a href='/services' className='c-btn hero__desc-btn arrow-anim animHover'>
           <span className='c-btn_text'>Services</span>
           <img
             className='c-btn_icon'
