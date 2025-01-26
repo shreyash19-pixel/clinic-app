@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../styles/Services/index.scss";
 import ServicesImg from "../../assets/Services/lowerLimb.jpeg";
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
+import Form from '../../components/Form'
+import '../../styles/Home/Army/index.scss'
 
 const Services = () => {
   // Array of services data
+
+   const [showModal, setShowModal] = useState(false)
+  
+    showModal ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
+  
+    const handleModal = () => {
+      setShowModal(true)
+    }
   const services = [
     {
       id: 1,
@@ -92,13 +102,17 @@ const Services = () => {
               <div className="services__card-description">
                 <h3 className="services__card-description-title">{service.name}</h3>
                 <p className="services__card-description-text">{service.description}</p>
-                <button className="services__card-description-btn">Book Now</button>
+                <button className="services__card-description-btn" onClick={handleModal}>Book Now</button>
               </div>
             </div>
           ))}
         </div>
+        {showModal && (<div className="services__modalWrap">
+          <Form visible={true} setShowModal={setShowModal} />
+        </div>)}
       </section>
       <Footer />
+     
     </div>
   );
 };
