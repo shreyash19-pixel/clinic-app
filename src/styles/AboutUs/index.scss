@@ -2,203 +2,106 @@
 @import '../colors';
 
 .about-us {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
+  gap: 30px;
 
-  &__content {
-    max-width: 1200px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-  }
-
-  &__context{
+  &__context {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
 
-    &_title{
+    &_title {
       @include font_medium40;
       color: $c-black;
     }
 
-    &_subtitle{
+    &_subtitle {
       @include font_regular15;
-      color : $c-grey1;
-      text-align: left;
+      color: $c-grey1;
     }
   }
 
-  .carousel {
-    position: relative;
-    overflow: hidden;
+  &__cardsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; // Allows cards to wrap on smaller screens
 
-    &__wrapper {
+    &-cards {
       display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    &__slide {
-      min-width: 100%;
-      display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-    }
-
-    &__button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1.5rem;
-      z-index: 10;
+      padding: 15px;
+      border-radius: 10px;
+      width: 360px;
+      gap: 10px;
+      background-color: #12ac8e;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
-        background: #0056b3;
+        transform: scale(1.05); // Slight zoom-in effect
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); // Subtle shadow on hover
       }
 
-      &--prev {
-        left: 10px;
+      &-title {
+        @include font__medium20;
+        color: $c-black;
       }
 
-      &--next {
-        right: 10px;
+      &-subtitle {
+        @include font_regular15;
+        color: $c-grey1;
       }
     }
   }
 
-  &__image-wrap {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+  // Media query for responsiveness
+  @media (max-width: 768px) {
+    padding: 0 16px;
 
-    .about-us__image {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
+    &__context_title {
+      @include font__medium20; // Slightly smaller title font
+    }
+
+    &__cardsWrapper {
+      gap: 20px; // Reduced gap between cards
+
+      &-cards {
+        width: 100%; // Full width for smaller screens
+        max-width: 320px; // Ensure cards don't get too wide
+      }
     }
   }
 
-  &__message-wrap {
-    flex: 1;
-    padding: 2rem;
-
-    .about-us__title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 1rem;
+  @media (max-width: 480px) {
+    &__context_title {
+      @include font__medium24; // Further reduce font size for title
     }
 
-    .about-us__message {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1rem;
+    &__context_subtitle {
+      @include font_regular15; // Smaller subtitle font
     }
 
-    .about-us__signature {
-      font-size: 1.2rem;
-      font-weight: bold;
-      font-style: italic;
-      color: #333;
+    &__cardsWrapper {
+      gap: 15px; // Narrower gaps for tighter spaces
+
+      &-cards {
+        padding: 12px; // Adjust padding for smaller screens
+      }
     }
   }
-}
-
-.professional{
-    width: 100%;
-    max-width: 1310px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
-    margin-top: 100px;
-    padding-inline: 20px;
-
-    &__headingWrap{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        &-heading{
-            @include font_medium40;
-        }
-
-        &-subheading{
-            max-width: 770px;
-            @include font_medium15;
-            color: $c-grey1;
-        }
-    }
-
-    &__peopleWrap{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 28px;
-
-        &-infoCard{
-            display: flex;
-            flex-direction: column;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Apply shadow */
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            
-
-            &-img{
-                width: 350px;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-            }
-
-            &-detailsWrap{
-                min-height: 120px;
-                padding-top: 10px;
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                align-items: center;
-                justify-content: center;
-
-                &-name{
-                    @include font_medium17;
-                }
-
-                &-designation{
-                    @include font_regular15;
-                    color: $c-grey1;
-                }
-            }
-        }
-    }
 }

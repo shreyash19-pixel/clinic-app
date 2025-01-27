@@ -13,6 +13,9 @@
     margin-top: 80px;
     padding-inline: 20px;
 
+    @media (max-width: 768px) {
+       margin-top: 30px;
+    }
 
     &__headingWrap {
         display: flex;
@@ -64,7 +67,7 @@
         }
 
         @media (max-width: 768px) {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         &-list {
@@ -117,6 +120,7 @@
     &__modalWrap {
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
         display: flex;
         align-items: center;

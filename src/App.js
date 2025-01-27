@@ -9,6 +9,7 @@ import Photos from './pages/Photos';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Director from './pages/Director'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route exact path="/about-us" element={<AboutUs />} />
             <Route exact path="/services" element={<Services/>} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/director" element={<Director />} />
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>

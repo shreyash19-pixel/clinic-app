@@ -3,7 +3,7 @@ import '../../../styles/Home/Army/index.scss';
 import '../../../styles/_main.scss'
 import RightArrow from '../../../assets/icon_rightArrow.svg';
 import Form from '../../../components/Form';
-import ServicesImg from "../../../assets/Services/lowerLimb.jpeg";
+import ServicesImg from "../../../assets/Services/Hand Orthotics.jpeg";
 
 const Army = () => {
 
@@ -46,7 +46,7 @@ const Army = () => {
             </button>
 
             {showModal && (<div className="army__modalWrap">
-                <Form visible={true} setShowModal={setShowModal} />
+                <Form visible={true}  setShowModal={setShowModal} />
             </div>)}
         </section>
     )

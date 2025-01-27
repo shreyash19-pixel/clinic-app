@@ -3,6 +3,7 @@ import "../../styles/Contact/index.scss";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
+import Form from "../../components/Form";
 
 const ContactUs = () => {
   return (
@@ -50,6 +51,7 @@ const ContactUs = () => {
             ></iframe>
           </div>
         </div>
+        <Form />
       </section>
       <Footer />
     </div>

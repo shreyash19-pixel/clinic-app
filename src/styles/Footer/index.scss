@@ -2,7 +2,7 @@
 @import '../colors';
 
 
-.footer{
+.footer {
     background-color: #e9f7f7;
     width: 100%;
     display: flex;
@@ -11,56 +11,91 @@
     padding: 50px;
     margin-top: 100px;
 
-    img + div{
+    @media (max-width: 768px) {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    img+div {
         margin-top: 20px;
     }
 
-    img{
+    img {
         width: 130px;
-        height:110px;
+        height: 110px;
+
+        @media (max-width: 768px) {
+            width: 100px;
+            height: 80px;
+         }
     }
 
-    &__linksWrap{
-        display: flex;
+    &__linksWrap {
+        width: 100%;
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
         gap: 90px;
 
-        &-list{
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            row-gap: 50px;
+        }
+
+        &-list {
             display: flex;
             flex-direction: column;
             justify-content: center;
 
 
-            .--links{
+            .--links {
                 margin-top: 30px;
             }
 
-            &Heading{
+            &Heading {
                 color: $c-blue;
                 @include font__medium20;
+
+                @media (max-width: 768px) {
+                    @include font_medium17;
+                }
             }
 
-            &Links{
+            &Links {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
-                a{
+                a {
                     @include font_regular17;
                     transition: all .3s;
 
-                    &:hover{
+                    @media (max-width: 768px) {
+                        @include font_regular13;
+                    }
+
+                    &:hover {
 
                         color: $c-blue;
                     }
                 }
 
-                p{
+                p {
                     width: 100%;
                     max-width: 380px;
                     @include font_medium17;
+
+                    @media (max-width: 768px) {
+                        @include font_medium13;
+                    }
                 }
 
-                img + p + p{
+                img+p+p {
                     padding-left: 24px;
                 }
             }

@@ -5,7 +5,7 @@ import '../../styles/Form/index.scss'
 import { RxCross2 } from "react-icons/rx";
 
 
-const Form = ({visible, setShowModal}) => {
+const Form = ({visible, showModal,setShowModal}) => {
     const [formData, setFormData] = useState({
         name: '',
         number: '',
@@ -98,9 +98,10 @@ const Form = ({visible, setShowModal}) => {
             console.error('Error sending POST request:', error.message);
         }
     }
+    
     return (
 
-        <form className='c-form' onSubmit={formSubmit}>
+        <form className={`c-form ${showModal === true ? 'show' : 'hide'}`}  onSubmit={formSubmit}>
             <h2 className='c-form__heading'>Details</h2>
 
            {visible && (<div className='c-form__close' onClick={() => setShowModal(false)}>
@@ -172,7 +173,7 @@ const Form = ({visible, setShowModal}) => {
                 )}
             </div>
 
-            <div className='c-form__inputWrap'>
+            {visible && (<div className='c-form__inputWrap'>
                 <select
                     className='c-form__select'
                     name='patient'
@@ -190,7 +191,7 @@ const Form = ({visible, setShowModal}) => {
                 {errors.treatment && (
                     <p className='c-form__error'>{errors.treatment}</p>
                 )}
-            </div>
+            </div>)}
             <button type='submit' className='c-form__btn'>
                 Book now
             </button>

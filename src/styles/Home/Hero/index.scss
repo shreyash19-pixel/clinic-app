@@ -3,7 +3,7 @@
 
 
 
-.navbar-hero{
+.navbar-hero {
     background-image: url('../../../assets/Home/Nav/hero-img.jpg');
     background-position: center center;
     background-size: cover;
@@ -11,7 +11,7 @@
     position: relative;
 }
 
-.black-layer{
+.black-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -21,7 +21,7 @@
 }
 
 
-.hero{
+.hero {
     width: 100%;
     max-width: 1310px;
     margin: 0 auto;
@@ -32,25 +32,57 @@
     position: relative;
     z-index: 1;
 
-    &__desc{
+    &__desc {
         width: 100%;
         max-width: 800px;
         display: flex;
         flex-direction: column;
         gap: 32px;
 
-        &-heading{
-            @include font_medium56;
-            color: $c-white;
+        @media (max-width: 1024px) {
+
+           gap: 16px;
+
         }
 
-        &-subheading{
+        &-heading {
+            @include font_medium56;
+            color: $c-white;
+
+            @media (max-width: 1024px) {
+
+                @include font__medium36;
+                max-width: 500px;
+
+            }
+        }
+
+        &-subheading {
             color: $c-grey;
             width: 100%;
             max-width: 600px;
+
+            @media (max-width: 1024px) {
+
+                @include font_regular15;
+
+            }
         }
 
     }
 
+
+    @media (max-width: 1024px) {
+
+        .c-form.hide {
+            display: none;
+        }
+
+        .c-form.show{
+            display: flex;
+        }
+
+
+    }
 
 }

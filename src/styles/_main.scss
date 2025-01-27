@@ -55,10 +55,23 @@
   }
 }
 
+.isAbove1024{
+  display: flex;
+}
 
-@media (max-width: 768px)
+.isBelow1024{
+  display: none;
+}
+
+@media (max-width: 1024px)
 {
-    .isBelow768{
-      display: none;
+
+  .isAbove1024{
+    display: none;
+  }
+    .isBelow1024{
+      display: flex;
     }
+
+    
 }

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../../../styles/Home/Service/index.scss";
-import ServicesImg from "../../../assets/Services/lowerLimb.jpeg";
-import Form from '../../../components/Form';
+import ServicesImg from "../../../assets/Services/Hand Orthotics.jpeg";
+import { RiMentalHealthLine } from "react-icons/ri";
+import { RiMicroscopeLine } from "react-icons/ri";
+import { RiHospitalLine } from "react-icons/ri";
 
 const Service = () => {
   const services = [
@@ -21,7 +23,6 @@ const Service = () => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [showModal, setShowModal] = useState(false)
 
   showModal ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto";
@@ -30,77 +31,41 @@ const Service = () => {
     setShowModal(true)
   }
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "ArrowRight") nextSlide();
-      if (e.key === "ArrowLeft") prevSlide();
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % services.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
-  };
 
   return (
     <section className="service">
-      <h2 className="service__heading">Our service</h2>
+      <h2 className="service__heading">Our Special service</h2>
       <p className="service__subheading">
-        Explore our specialized prosthetic solutions to help you regain mobility and confidence.
+        We emphasize the importance of personalized care for our patients, delivering the most comfortable and functional customised prosthetic device possible to fit your needs.
       </p>
-      <div className="service__slider">
-        <div
-          className="service__slider-wrapper"
-          style={{
-            transform: `translateX(-${currentSlide * 100}%)`,
-          }}
-        >
-          {services.map((service) => (
-            <div className="service__card" key={service.id}>
-              <img
-                src={service.imgSrc}
-                alt={service.name}
-                className="service__card-img"
-              />
-              <div className="service__card-description">
-                <h3 className="service__card-description-title">
-                  {service.name}
-                </h3>
-                <p className="service__card-description-text">
-                  {service.description}
-                </p>
-                <button className="service__card-description-btn" onClick={handleModal}>
-                  Book Now
-                </button>
-              </div>
-            </div>
-          ))}
+      <div class="service__grid">
+        <div class="service__card">
+          <span><RiMentalHealthLine />
+          </span>
+          <h4>MAT-SCAN TECHNOLOGY</h4>
+          <p>We work with health professionals in various disciplines and with clients of all ages:
+            Pediatric physiotherapists and children with disabilities Sports physicians and athletes
+            Podiatrists with diabetic patients Orthopaedic surgeons in fracture clinics Doctors in
+            hospital Intensive Care Units.</p>
         </div>
-        <button className="service__btn service__btn-prev" onClick={prevSlide}>
-          &lt;
-        </button>
-        <button className="service__btn service__btn-next" onClick={nextSlide}>
-          &gt;
-        </button>
-        <div className="service__indicators">
-          {services.map((_, index) => (
-            <span
-              key={index}
-              className={`indicator ${index === currentSlide ? "active" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-            ></span>
-          ))}
+        <div class="service__card">
+          <span><RiMicroscopeLine /></span>
+          <h4>Pediatric Evaluation</h4>
+          <p>We have a team of pediatricians, orthopaedic surgeons, rehab, amputation doctors, senior P&amp;O professionals,
+            occupational therapists, physiotherapists and psychologists. Our organization is more focused/specialized
+            regarding the cerebral palsy (CP) delayed mild stone children, CTEV, C.D.H., and congenital absence of upper
+            and lower limbs, Perthes disease, Erb's palsy, corneal congenital disorder, etc.</p>
+        </div>
+        <div class="service__card">
+          <span><RiHospitalLine /></span>
+          <h4>ANAPLASTOLOGY</h4>
+          <p>
+            We emphasize the importance of personalized care for our patients,
+            delivering the most comfortable and functional customised prosthetic device possible
+            to fit your needs. Our experienced practitioners use current technologies and innovate.
+          </p>
         </div>
       </div>
-      <a href="#" className="service__link">See all</a>
-      {showModal && (<div className="army__modalWrap">
-        <Form visible={true} setShowModal={setShowModal} />
-      </div>)}
     </section>
   );
 };
