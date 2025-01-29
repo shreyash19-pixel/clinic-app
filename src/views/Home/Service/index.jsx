@@ -36,33 +36,52 @@ const Service = () => {
     <section className="service">
       <h2 className="service__heading">Our Special service</h2>
       <p className="service__subheading">
-        We emphasize the importance of personalized care for our patients, delivering the most comfortable and functional customised prosthetic device possible to fit your needs.
+        P&O International specializes in advanced prosthetic upper limb
+        prosthetics, such as customized sockets designed for comfort. Our lower
+        limb prosthesis solutions include artificial prosthesis and lifelike
+        prosthetic hands to help regain functionality and independency in life.
       </p>
       <div class="service__grid">
         <div class="service__card">
-          <span><RiMentalHealthLine />
+          <span>
+            <RiMentalHealthLine />
           </span>
           <h4>MAT-SCAN TECHNOLOGY</h4>
-          <p>We work with health professionals in various disciplines and with clients of all ages:
-            Pediatric physiotherapists and children with disabilities Sports physicians and athletes
-            Podiatrists with diabetic patients Orthopaedic surgeons in fracture clinics Doctors in
-            hospital Intensive Care Units.</p>
+          <p>
+            P&O International now merges advanced MAT-Scan Technology in the
+            development and manufacturing of upper and lower limb prosthetics
+            for enhanced accuracy. This state-of-the-art technology utilizes
+            detailed pressure distribution as well as foot dynamics to create a
+            perfectly aligned and comfortable prosthetic solution that will
+            maximize any patient's performance and function.
+          </p>
         </div>
         <div class="service__card">
-          <span><RiMicroscopeLine /></span>
+          <span>
+            <RiMicroscopeLine />
+          </span>
           <h4>Pediatric Evaluation</h4>
-          <p>We have a team of pediatricians, orthopaedic surgeons, rehab, amputation doctors, senior P&amp;O professionals,
-            occupational therapists, physiotherapists and psychologists. Our organization is more focused/specialized
-            regarding the cerebral palsy (CP) delayed mild stone children, CTEV, C.D.H., and congenital absence of upper
-            and lower limbs, Perthes disease, Erb's palsy, corneal congenital disorder, etc.</p>
+          <p>
+            P&O International specializes in pediatric evaluation for customized
+            limb prosthetics, ensuring optimal fit, comfort, and functionality
+            for growing children. Our expert team focuses on personalized care,
+            advanced technology, and compassionate support to help young
+            individuals achieve mobility, confidence, and an improved quality of
+            life.
+          </p>
         </div>
         <div class="service__card">
-          <span><RiHospitalLine /></span>
+          <span>
+            <RiHospitalLine />
+          </span>
           <h4>ANAPLASTOLOGY</h4>
           <p>
-            We emphasize the importance of personalized care for our patients,
-            delivering the most comfortable and functional customised prosthetic device possible
-            to fit your needs. Our experienced practitioners use current technologies and innovate.
+            P&O International offers anaplastology services to create realistic
+            prosthetic solutions for facial and body restoration. Our advanced
+            techniques are easily integrated with limb prosthetics, providing a
+            natural aesthetic and functionality. Trust our specialized team to
+            provide personalized care and cutting-edge technology for
+            life-changing results.
           </p>
         </div>
       </div>

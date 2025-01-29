@@ -14,8 +14,8 @@ const ContactUs = () => {
         <div className="contact-us__header">
           <h1 className="contact-us__header-title">Contact Us</h1>
           <p className="contact-us__header-subtitle">
-            Welcome, where exceptional patient experiences are our priority. With
-            compassionate care, state-of-the-art facilities, and a
+            Welcome, where exceptional patient experiences are our priority.
+            With compassionate care, state-of-the-art facilities, and a
             patient-centered approach, we're dedicated to your well-being. Trust
             us with your health and experience the difference!
           </p>
@@ -25,20 +25,22 @@ const ContactUs = () => {
             <div className="contact-us__content-details-item">
               <FaMapMarkerAlt className="contact-us__content-details-icon" />
               <p>
-                <strong>Address:</strong> P&O International, 123 Street Name,
-                City, Country
+                <strong>Address:</strong> PO – 46, Near Vinobapuri Metro
+                Station, Gate No-1 Behind Imperial Hotel, Lajpat Nagar- II, New
+                Delhi, Delhi 110024
               </p>
             </div>
             <div className="contact-us__content-details-item">
               <FaPhoneAlt className="contact-us__content-details-icon" />
               <p>
-                <strong>Phone:</strong> +123 456 7890
+                <strong>Phone:</strong> +91-8881788788, +91-8800393472
               </p>
             </div>
             <div className="contact-us__content-details-item">
               <FaEnvelope className="contact-us__content-details-icon" />
               <p>
-                <strong>Email:</strong> contact@pointernational.in
+                <strong>Email:</strong> Director@pointernational.in,
+                Rajni@pointernational.in
               </p>
             </div>
           </div>
