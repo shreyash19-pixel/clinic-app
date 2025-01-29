@@ -5,11 +5,11 @@ import Footer from "../../components/Footer";
 
 // Importing all photos dynamically
 const photoImports = [
-  "Photo1.jpeg",
-  "Photo2.jpeg",
-  "Photo3.jpeg",
-  "Photo4.jpeg",
-  "Photo5.jpeg",
+  "photo1.jpeg",
+  "photo2.jpeg",
+  "photo3.jpeg",
+  "photo4.jpeg",
+  "photo5.jpeg",
   "Photo6.jpeg",
   "Photo7.jpeg",
   "Photo8.jpeg",
