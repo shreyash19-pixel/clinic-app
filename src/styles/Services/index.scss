@@ -18,7 +18,7 @@
   &__description {
     @include font_regular15;
     text-align: center;
-    width: 600px;
+    width: 1000px;
 
     @media (max-width: 768px) {
       width: 100%; // Adjust to fit smaller screens
