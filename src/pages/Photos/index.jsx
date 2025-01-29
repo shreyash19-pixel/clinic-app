@@ -1,28 +1,90 @@
-import React from 'react'
-import Photo1 from '../../assets/Photos/photo1.jpeg'
-import Photo2 from '../../assets/Photos/photo2.jpeg'
-import Photo3 from '../../assets/Photos/photo3.jpeg'
-import Photo4 from '../../assets/Photos/photo4.jpeg'
-import Photo5 from '../../assets/Photos/photo5.jpeg'
+import React, { useState } from "react";
+import "../../styles/Photos/index.scss";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
 
-import '../../styles/Photos/index.scss'
-import Nav from '../../components/Nav'
-import Footer from '../../components/Footer'
+// Importing all photos dynamically
+const photoImports = [
+  "Photo1.jpeg",
+  "Photo2.jpeg",
+  "Photo3.jpeg",
+  "Photo4.jpeg",
+  "Photo5.jpeg",
+  "Photo6.jpeg",
+  "Photo7.jpeg",
+  "Photo8.jpeg",
+  "Photo9.jpeg",
+  "Photo10.jpeg",
+  "Photo11.jpeg",
+  "Photo12.jpeg",
+  "Photo13.jpeg",
+  "Photo14.jpeg",
+  "Photo15.jpeg",
+  "Photo16.jpeg",
+  "Photo17.jpeg",
+  "Photo18.jpeg",
+].map((photo) => require(`../../assets/Photos/${photo}`));
+
+const videoData = [
+  { id: "clLtCgWWT6A", title: "Video 1" },
+  { id: "s_cJ2pWxGPo", title: "Video 2" },
+  { id: "8DKoQ_8nZyA", title: "Video 3" },
+];
 
 const Photos = () => {
-    return (
-        <div>
-            <Nav />
-            <section className='photos'>
-                <img src={Photo1} alt="photos" className='photos__img' />
-                <img src={Photo2} alt="photos" className='photos__img' />
-                <img src={Photo3} alt="photos" className='photos__img' />
-                <img src={Photo4} alt="photos" className='photos__img' />
-                <img src={Photo5} alt="photos" className='photos__img' />
-            </section>
-            <Footer />
-        </div>
-    )
-}
+  const [hovered, setHovered] = useState(null);
 
-export default Photos
+  return (
+    <div>
+      <Nav />
+
+      {/* Photo Grid Section */}
+      <section className="photos">
+        {photoImports.map((photo, index) => (
+          <img
+            key={index}
+            src={photo}
+            alt={`photo-${index + 1}`}
+            className="photos__img"
+          />
+        ))}
+      </section>
+
+      {/* YouTube Video Section */}
+      <section className="video-section">
+        <h2 className="video-section__title">Watch Our Videos</h2>
+        <div className="video-grid">
+          {videoData.map((video, index) => (
+            <div
+              key={index}
+              className="video-container"
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() =>
+                window.open(
+                  `https://www.youtube.com/watch?v=${video.id}`,
+                  "_blank"
+                )
+              }
+            >
+              <iframe
+                src={
+                  hovered === index
+                    ? `https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1`
+                    : `https://www.youtube.com/embed/${video.id}`
+                }
+                title={video.title}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Photos;

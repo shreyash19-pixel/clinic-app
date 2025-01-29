@@ -3,7 +3,8 @@ import '../../../styles/Home/Army/index.scss';
 import '../../../styles/_main.scss'
 import RightArrow from '../../../assets/icon_rightArrow.svg';
 import Form from '../../../components/Form';
-import ServicesImg from "../../../assets/Services/Hand Orthotics.jpeg";
+import CGHS from '../../../assets/Home/Nav/CGHS.jpeg'
+import ECHS from '../../../assets/Home/Nav/ECHS.jpeg'
 
 const Army = () => {
 
@@ -23,12 +24,12 @@ const Army = () => {
 
             <ul className="army__descWrap">
                 <li className='army__descWrap-list'>
-                    <img className="army__descWrap-list-img" src={ServicesImg} alt="expertise" />
+                    <img className="army__descWrap-list-img" src={ECHS} alt="expertise" />
                     <h2 className='army__descWrap-list-heading'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                     <p className='army__descWrap-list-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, et. Perspiciatis, ad fugit! Quia debitis explicabo, nobis quaerat ipsa veritatis similique doloremque, accusamus assumenda inventore iusto animi! Accusantium, numquam aspernatur!</p>
                 </li>
                 <li className='army__descWrap-list'>
-                    <img className="army__descWrap-list-img" src={ServicesImg} alt="expertise" />
+                    <img className="army__descWrap-list-img" src={CGHS} alt="expertise" />
                     <h2 className='army__descWrap-list-heading'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                     <p className='army__descWrap-list-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, et. Perspiciatis, ad fugit! Quia debitis explicabo, nobis quaerat ipsa veritatis similique doloremque, accusamus assumenda inventore iusto animi! Accusantium, numquam aspernatur!</p>
                 </li>

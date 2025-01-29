@@ -8,6 +8,7 @@ import Nav from '../../components/Nav'
 import Service from '../../views/Home/Service'
 import Director from '../../views/Home/Director'
 import Reviews from '../../views/Home/Reviews'
+import WhatsAppButton from '../../components/WhatsApp/WhatsAppButton'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <WhyChooseUs />
       <Reviews />
       <Team />
+      <WhatsAppButton/>
       <Footer />
     </div>
   )
