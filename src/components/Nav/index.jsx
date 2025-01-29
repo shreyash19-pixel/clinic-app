@@ -37,7 +37,7 @@ const Nav = () => {
                         Services
                     </a>
                     <a className='navbar__mid-list-links' href='/photos'>
-                        Photos
+                        Gallery
                     </a>
                     <a href={Brochure} className='navbar__mid-list-links' download>Brochure</a>
                 </li>

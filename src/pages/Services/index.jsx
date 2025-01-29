@@ -95,38 +95,58 @@ const Services = () => {
       <Nav />
       <section className="services">
         <h1 className="services__title">Our Services</h1>
-        <p className="services__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus, placeat cumque quasi qui, saepe eius incidunt modi repellendus consequuntur blanditiis expedita ipsa perferendis voluptatum veritatis sapiente, fugit quos tenetur.
+        <p className="services__description">
+          P&O International is the name associated and trusted for providing the
+          best artificial services in India for those who have lost a limb. Our
+          upper limb prosthetics work toward restoring function and mobility,
+          and the masters of bespoke design provide custom upper limb prosthetic
+          sockets that cater to maximum comfort and stability. We also
+          specialize in high-tech, customized lower-limb prosthetic technology
+          designed for better mobility and independence. Our leading-edge
+          artificial limb products range from very realistic prosthetic hands.
+          We have all solutions individually suited to meet our clients'
+          specific needs. <br />
+          Being one of the first companies in the field of artificial limb
+          prosthesis, we are proud of providing innovative and personalized care
+          to transform lives. Reputed for offering some of the best artificial
+          services in India, our solutions combine advanced technology with
+          expert craftsmanship to empower people to regain their freedom and
+          confidence.
         </p>
         <div className="services__content">
-        {services.map((service) => (
-          <div className="services__card" key={service.id}>
-            <div className="services__card-image">
-              <img
-                src={service.imgSrc}
-                alt={service.name}
-                className="services__card-img"
-              />
+          {services.map((service) => (
+            <div className="services__card" key={service.id}>
+              <div className="services__card-image">
+                <img
+                  src={service.imgSrc}
+                  alt={service.name}
+                  className="services__card-img"
+                />
+              </div>
+              <div className="services__card-description">
+                <h3 className="services__card-description-title">
+                  {service.name}
+                </h3>
+                <p className="services__card-description-text">
+                  {service.description}
+                </p>
+                <button
+                  className="services__card-description-btn"
+                  onClick={handleModal}
+                >
+                  Book Now
+                </button>
+              </div>
             </div>
-            <div className="services__card-description">
-              <h3 className="services__card-description-title">
-                {service.name}
-              </h3>
-              <p className="services__card-description-text">
-                {service.description}
-              </p>
-              <button className="services__card-description-btn" onClick={handleModal}>
-                Book Now
-              </button>
-            </div>
+          ))}
+        </div>
+        {showModal && (
+          <div className="army__modalWrap">
+            <Form visible={true} setShowModal={setShowModal} />
           </div>
-        ))}
-      </div>
-        {showModal && (<div className="army__modalWrap">
-          <Form visible={true} setShowModal={setShowModal} />
-        </div>)}
+        )}
       </section>
       <Footer />
-     
     </div>
   );
 };
