@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         {showModal && (<div className="army__modalWrap">
-          <Form visible={true} showModal={showModal} setShowModal={setShowModal} />
+          <Form isFieldvisible={false} isIconVisible = {true} showModal={showModal} setShowModal={setShowModal} />
         </div>)}
 
         <Form visible={false} />

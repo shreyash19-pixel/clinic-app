@@ -6,18 +6,21 @@ import '../../styles/Admin/index.scss'
 import { AppContext } from '../../ContextApi/AppContext'
 
 const Admin = () => {
-  const { data} = useContext(AppContext);
+  const { data } = useContext(AppContext);
 
   const [filterTreatment, setFilterTreatment] = useState([]);
+  const [filterArmy, setFilterArmy] = useState([]);
   const [filterDate, setFilterDate] = useState("");
 
 
   const filteredData = data.filter((row) => {
     const matchesTreatment =
-      filterTreatment.length === 0 || filterTreatment.includes(row.treatment) || filterTreatment.includes(''); 
+      filterTreatment.length === 0 || filterTreatment.includes(row.treatment) || filterTreatment.includes('');
+    const matchesArmy =
+    filterArmy.length === 0 || filterArmy.includes(row.army) || filterArmy.includes('');
     const matchesDate =
-      !filterDate || row.date.includes(filterDate); 
-    return matchesTreatment && matchesDate;
+      !filterDate || row.date.includes(filterDate);
+    return matchesTreatment && matchesDate && matchesArmy;
   });
 
   const columns = [
@@ -50,6 +53,33 @@ const Admin = () => {
             <MenuItem value="Arm">Arm</MenuItem>
             <MenuItem value="Face / Eye / Nose / Ear">Face / Eye / Nose / Ear</MenuItem>
             <MenuItem value="Other">Other</MenuItem>
+          </Select>
+        </div>
+      ),
+    },
+    {
+      field: "army",
+      headerName: "Army",
+      width: 230,
+      renderHeader: () => (
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "25px" }}>
+          <span>Army</span>
+          <Select
+            multiple
+            value={filterArmy}
+            onChange={(e) => setFilterArmy(e.target.value)}
+            displayEmpty
+            sx={{
+              width: "100%",
+              border: "none",
+              "& .MuiOutlinedInput-notchedOutline": {
+                border: "none", // Removes the border of the dropdown
+              },
+            }}
+          >
+            <MenuItem value="">All</MenuItem>
+            <MenuItem value="Leg">ECHS</MenuItem>
+            <MenuItem value="Arm">CGHS</MenuItem>
           </Select>
         </div>
       ),

@@ -46,7 +46,7 @@ const Army = () => {
             </button>
 
             {showModal && (<div className="army__modalWrap">
-                <Form visible={true}  setShowModal={setShowModal} />
+                <Form isFieldvisible={true} isIconVisible = {true}  setShowModal={setShowModal} />
             </div>)}
         </section>
     )

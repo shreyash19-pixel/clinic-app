@@ -122,7 +122,7 @@ const Services = () => {
         ))}
       </div>
         {showModal && (<div className="army__modalWrap">
-          <Form visible={true} setShowModal={setShowModal} />
+          <Form isFieldvisible={false} isIconVisible = {true} setShowModal={setShowModal} />
         </div>)}
       </section>
       <Footer />
