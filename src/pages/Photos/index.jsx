@@ -19,10 +19,6 @@ const photoImports = [
   "Photo12.jpg",
   "Photo13.jpg",
   "Photo14.jpg",
-  "Photo15.jpg",
-  "Photo16.jpg",
-  "Photo17.jpg",
-  "Photo18.jpg",
 ].map((photo) => require(`../../assets/Photos/${photo}`));
 
 const videoData = [
