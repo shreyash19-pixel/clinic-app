@@ -5,24 +5,20 @@ import Footer from "../../components/Footer";
 
 // Importing all photos dynamically
 const photoImports = [
-  "Photo1.jpeg",
-  "Photo2.jpeg",
-  "Photo3.jpeg",
-  "Photo4.jpeg",
-  "Photo5.jpeg",
-  "Photo6.jpeg",
-  "Photo7.jpeg",
-  "Photo8.jpeg",
-  "Photo9.jpeg",
-  "Photo10.jpeg",
-  "Photo11.jpeg",
-  "Photo12.jpeg",
-  "Photo13.jpeg",
-  "Photo14.jpeg",
-  "Photo15.jpeg",
-  "Photo16.jpeg",
-  "Photo17.jpeg",
-  "Photo18.jpeg",
+  "Photo1.jpg",
+  "Photo2.jpg",
+  "Photo3.jpg",
+  "Photo4.jpg",
+  "Photo5.jpg",
+  "Photo6.jpg",
+  "Photo7.jpg",
+  "Photo8.jpg",
+  "Photo9.jpg",
+  "Photo10.jpg",
+  "Photo11.jpg",
+  "Photo12.jpg",
+  "Photo13.jpg",
+  "Photo14.jpg",
 ].map((photo) => require(`../../assets/Photos/${photo}`));
 
 const videoData = [
@@ -39,16 +35,6 @@ const Photos = () => {
       <Nav />
 
       {/* Photo Grid Section */}
-      <section className="photos">
-        {photoImports.map((photo, index) => (
-          <img
-            key={index}
-            src={photo}
-            alt={`photo-${index + 1}`}
-            className="photos__img"
-          />
-        ))}
-      </section>
 
       {/* YouTube Video Section */}
       <section className="video-section">
@@ -80,6 +66,17 @@ const Photos = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="photos">
+        {photoImports.map((photo, index) => (
+          <img
+            key={index}
+            src={photo}
+            alt={`photo-${index + 1}`}
+            className="photos__img"
+          />
+        ))}
       </section>
 
       <Footer />
