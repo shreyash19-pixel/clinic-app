@@ -5,13 +5,13 @@ import '../../styles/Form/index.scss'
 import { RxCross2 } from "react-icons/rx";
 
 
-const Form = ({visible, showModal,setShowModal}) => {
+const Form = ({ isFieldvisible, isIconVisible, showModal, setShowModal }) => {
     const [formData, setFormData] = useState({
         name: '',
         number: '',
         address: '',
         treatment: '',
-        patient: '',
+        army: '',
     });
 
     const [errors, setErrors] = useState({});
@@ -28,8 +28,8 @@ const Form = ({visible, showModal,setShowModal}) => {
                 return value.trim() === '' ? 'Address is required' : '';
             case 'treatment':
                 return value === '' ? 'Please select a treatment type' : '';
-            case 'patient':
-                return value === '' ? 'Please select a patient type' : '';
+            case 'army':
+                return isFieldvisible && value === '' ? 'Please select an army type' : '';
             default:
                 return '';
         }
@@ -78,9 +78,6 @@ const Form = ({visible, showModal,setShowModal}) => {
     };
 
 
-
-    console.log(data);
-
     const postData = async () => {
         try {
             const response = await axios.post("http://localhost:8000/api/contact", formData)
@@ -90,7 +87,7 @@ const Form = ({visible, showModal,setShowModal}) => {
                     number: '',
                     address: '',
                     treatment: '',
-                    patient: ''
+                    army: ''
                 })
             }
         }
@@ -98,15 +95,19 @@ const Form = ({visible, showModal,setShowModal}) => {
             console.error('Error sending POST request:', error.message);
         }
     }
-    
+
     return (
 
-        <form className={`c-form ${showModal === true ? 'show' : 'hide'}`}  onSubmit={formSubmit}>
-            <h2 className='c-form__heading'>Details</h2>
+        <form className={`c-form ${showModal === true ? 'show' : 'hide'}`} onSubmit={formSubmit}>
 
-           {visible && (<div className='c-form__close' onClick={() => setShowModal(false)}>
-                <RxCross2 />
-            </div>) }
+
+            <div className='c-form__headingWrap'>
+                <h2 className='c-form__headingWrap-heading'>Details</h2>
+
+                {isIconVisible && (<div className='c-form__close' onClick={() => setShowModal(false)}>
+                    <RxCross2 />
+                </div>)}
+            </div>
 
             <div className='c-form__inputWrap'>
                 <input
@@ -173,14 +174,14 @@ const Form = ({visible, showModal,setShowModal}) => {
                 )}
             </div>
 
-            {visible && (<div className='c-form__inputWrap'>
+            {isFieldvisible && (<div className='c-form__inputWrap'>
                 <select
                     className='c-form__select'
-                    name='patient'
-                    id='patient'
-                    value={formData.patient}
+                    name='army'
+                    id='army'
+                    value={formData.army}
                     onChange={handleChange}
-                    aria-invalid={!!errors.patient}
+                    aria-invalid={!!errors.army}
                 >
                     <option disabled value=''>
                         Select
@@ -188,9 +189,8 @@ const Form = ({visible, showModal,setShowModal}) => {
                     <option value='ECHS'>ECHS</option>
                     <option value='CGHS'>CGHS</option>
                 </select>
-                {errors.treatment && (
-                    <p className='c-form__error'>{errors.treatment}</p>
-                )}
+                {errors.army && <p className='c-form__error'>{errors.army}</p>}
+
             </div>)}
             <button type='submit' className='c-form__btn'>
                 Book now

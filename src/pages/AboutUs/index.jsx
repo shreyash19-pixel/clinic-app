@@ -27,7 +27,7 @@ const AboutUs = () => {
         </div>
         <div class="service__grid">
           <div class="service__card">
-            <span>
+            <span className="icon">
               <FaLocationDot />
             </span>
             <h4>5+ Braches</h4>
@@ -39,7 +39,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div class="service__card">
-            <span>
+            <span className="icon">
               <MdOutlineReviews />
             </span>
             <h4>25,000+ Satisfied Clients</h4>
@@ -52,7 +52,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div class="service__card">
-            <span>
+            <span className="icon">
               <MdOutlineSentimentVerySatisfied />
             </span>
             <h4>98% + Client Satisfacation Rate</h4>

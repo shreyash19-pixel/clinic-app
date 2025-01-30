@@ -75,13 +75,11 @@ const Army = () => {
           />
         </button>
 
-        {showModal && (
-          <div className="army__modalWrap">
-            <Form visible={true} setShowModal={setShowModal} />
-          </div>
-        )}
-      </section>
-    );
+            {showModal && (<div className="army__modalWrap">
+                <Form isFieldvisible={true} isIconVisible = {true}  setShowModal={setShowModal} />
+            </div>)}
+        </section>
+    )
 }
 
 export default Army

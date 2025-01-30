@@ -21,23 +21,20 @@
 
     }
 
-    &__heading{
-        color: $c-blue;
-        @include font__medium24;
-        margin-bottom: 16px;
+    &__headingWrap{
+        display: flex;
+        justify-content: space-between;
+
+        &-heading{
+            color: $c-blue;
+            @include font__medium24;
+            margin-bottom: 16px;
+        }
     }
 
     &__close{
-        position: absolute;
-        right: 30px;
         font-size: 24px;
         cursor: pointer;
-
-        @media (max-width: 460px) {
-        
-           top: 149px;
-    
-        }
     }
 
     &__inputWrap{

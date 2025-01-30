@@ -57,12 +57,12 @@
 
         p {
           margin: 0;
-          @include font_regular15;
+          @include font_regular17;
           color: $c-grey1;
 
           strong {
             color: $c-black;
-            @include font_medium15;
+            @include font_medium17;
           }
         }
 
@@ -70,7 +70,7 @@
       }
 
       &-icon {
-        font-size: 24px;
+        font-size: 30px;
         color: $c-blue;
       }
     }

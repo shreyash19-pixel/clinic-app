@@ -70,6 +70,7 @@
             color: $c-black;
             font-size: 30px;
             cursor: pointer;
+            z-index: 4;
         }
     }
 
@@ -86,16 +87,11 @@
             gap: 60px;
             background-color: #F1F3F5;
             position: absolute;
-            top: 161px;
-            left: 0px;
+            top: 0;
+            left: 0;
             font-size: 22px;
             padding-top: 40px;
             z-index: 3;
-        }
-
-        @media (max-width: 768px) {
-            top: 136px;
-
         }
     }
 
