@@ -25,10 +25,10 @@ const Footer = () => {
         <div className="footer__linksWrap-list">
           <h4 className="footer__linksWrap-listHeading">About Us</h4>
           <div className="footer__linksWrap-listLinks --links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Work with Us</a>
-            <a href="#">Blog</a>
+            <a href="/">Home</a>
+            <a href="/about-us">About Us</a>
+            <a href="/contact">Contact</a>
+            <a href="/photos">Gallery</a>
             <a href="#">Terms & Conditions</a>
           </div>
         </div>
