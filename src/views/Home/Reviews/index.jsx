@@ -5,7 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../../styles/Home/Reviews/index.scss";
-import Review from "../../../assets/Home/Reviews/review-1.jpg";
+import Review1 from "../../../assets/Home/Reviews/review1.jpg";
+import Review2 from "../../../assets/Home/Reviews/review2.jpg";
+import Review3 from "../../../assets/Home/Reviews/review3.jpg";
 
 const Reviews = () => {
   const reviews = [
@@ -14,29 +16,23 @@ const Reviews = () => {
       name: "Michale",
       review:
         "I recently received my upper limb prosthesis from P&O International, and I couldn’t be happier with the experience! From the initial consultation to the final fitting, their team was incredibly professional, knowledgeable, and supportive.",
-      image: Review,
+      image: Review1,
     },
     {
       id: 2,
       name: "John",
       review:
         "I highly recommend P&O International to anyone in need of a high-quality upper limb prosthesis. Their expertise and commitment to improving mobility and independence are unmatched!",
-      image: Review,
+      image: Review2,
     },
     {
       id: 3,
-      name: "Sophia",
+      name: "Jim",
       review:
         "I recently got a cosmetic prosthesis from P&O International, and I am beyond impressed with the quality and service! From the very first consultation, their team made me feel comfortable and confident about the entire process.",
-      image: Review,
+      image: Review3,
     },
-    {
-      id: 4,
-      name: "Emma",
-      review:
-        "The staff at P&O International were professional, kind, and extremely knowledgeable. They took the time to understand my needs, ensured a perfect fit, and provided excellent aftercare support. Their dedication to customer satisfaction is evident in every step.",
-      image: Review,
-    },
+    
   ];
 
   return (

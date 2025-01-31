@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, MenuItem, Select, TextField } from "@mui/material";
 import * as XLSX from "xlsx";
-import '../../styles/Admin/index.scss'
+import '../../styles/Catalyst/index.scss'
 import { AppContext } from '../../ContextApi/AppContext'
 
 const Admin = () => {
