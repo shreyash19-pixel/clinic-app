@@ -2,14 +2,29 @@ import React, { useState } from "react";
 import "../../../styles/Home/Team/index.scss";
 import DoctorImg1 from "../../../assets/Home/Team/doctor-1.jpg";
 import DoctorImg2 from "../../../assets/Home/Team/doctor-2.jpg";
-import DoctorImg3 from "../../../assets/Home/Team/doctor-3.jpg";
+import DoctorImg3 from "../../../assets/Home/Team/doctor-4.jpg";
 
 const Team = () => {
   const teamMembers = [
-    { id: 1, name: "Anumpma Sharma", designation: "General Manager", imgSrc: DoctorImg1 },
-    { id: 2, name: "Viplav Tyagi", designation: "P&O Professionals", imgSrc: DoctorImg2 },
-    { id: 3, name: "Radha Khanna", designation: "P&O Professionals", imgSrc: DoctorImg3 },
-    { id: 4, name: "John Doe", designation: "Senior Specialist", imgSrc: DoctorImg1 },
+    {
+      id: 1,
+      name: "Anumpma Sharma",
+      designation: "General Manager",
+      imgSrc: DoctorImg1,
+    },
+    {
+      id: 2,
+      name: "Viplav Tyagi",
+      designation: "P&O Professionals",
+      imgSrc: DoctorImg2,
+    },
+    {
+      id: 3,
+      name: "Vaibhav Singh Rajput",
+      designation: "P&O Professionals",
+      imgSrc: DoctorImg3,
+    },
+    // { id: 4, name: "John Doe", designation: "Senior Specialist", imgSrc: DoctorImg1 },
   ];
 
 

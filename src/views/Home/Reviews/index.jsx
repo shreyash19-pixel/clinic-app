@@ -1,40 +1,40 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import '../../../styles/Home/Reviews/index.scss';
-import Review from '../../../assets/Home/Reviews/review-1.jpg';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../../../styles/Home/Reviews/index.scss";
+import Review from "../../../assets/Home/Reviews/review-1.jpg";
 
 const Reviews = () => {
   const reviews = [
     {
       id: 1,
-      name: 'Michale',
+      name: "Michale",
       review:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut similique inventore qui omnis corrupti quis adipisci aperiam ducimus reiciendis odio sunt praesentium minus hic iusto, unde quae quod tenetur maiores!',
+        "I recently received my upper limb prosthesis from P&O International, and I couldn’t be happier with the experience! From the initial consultation to the final fitting, their team was incredibly professional, knowledgeable, and supportive.",
       image: Review,
     },
     {
       id: 2,
-      name: 'John',
+      name: "John",
       review:
-        'Dolor sit amet consectetur adipisicing elit. Aut similique inventore qui omnis corrupti quis adipisci aperiam ducimus reiciendis odio sunt praesentium minus hic iusto.',
+        "I highly recommend P&O International to anyone in need of a high-quality upper limb prosthesis. Their expertise and commitment to improving mobility and independence are unmatched!",
       image: Review,
     },
     {
       id: 3,
-      name: 'Sophia',
+      name: "Sophia",
       review:
-        'Consectetur adipisicing elit. Aut similique inventore qui omnis corrupti quis adipisci aperiam ducimus reiciendis odio sunt praesentium minus hic iusto.',
+        "I recently got a cosmetic prosthesis from P&O International, and I am beyond impressed with the quality and service! From the very first consultation, their team made me feel comfortable and confident about the entire process.",
       image: Review,
     },
     {
       id: 4,
-      name: 'Emma',
+      name: "Emma",
       review:
-        'Adipisicing elit. Aut similique inventore qui omnis corrupti quis adipisci aperiam ducimus reiciendis odio sunt praesentium minus hic iusto.',
+        "The staff at P&O International were professional, kind, and extremely knowledgeable. They took the time to understand my needs, ensured a perfect fit, and provided excellent aftercare support. Their dedication to customer satisfaction is evident in every step.",
       image: Review,
     },
   ];
@@ -57,7 +57,11 @@ const Reviews = () => {
         {reviews.map((review) => (
           <SwiperSlide key={review.id}>
             <div className="reviews__card">
-              <img src={review.image} className="reviews__card-img" alt={review.name} />
+              <img
+                src={review.image}
+                className="reviews__card-img"
+                alt={review.name}
+              />
               <h3 className="reviews__card-name">{review.name}</h3>
               <p className="reviews__card-review">{review.review}</p>
             </div>
