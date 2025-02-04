@@ -37,7 +37,7 @@ const Reviews = () => {
 
   return (
     <section className="reviews">
-      <h2 className="reviews__heading">Customer Reviews</h2>
+      <h2 className="reviews__heading">Our Happy Clients</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}

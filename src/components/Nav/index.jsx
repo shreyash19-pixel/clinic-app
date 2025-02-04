@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Brochure from '../../assets/pdf/dummy-pdf_2.pdf'
+import Brochure from '../../assets/pdf/P&O.pdf'
 import Logo from '../../assets/logo.png';
 import RightArrow from '../../assets/icon_rightArrow.svg';
 import '../../styles/Nav/index.scss'

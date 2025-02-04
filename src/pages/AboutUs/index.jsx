@@ -15,15 +15,6 @@ const AboutUs = () => {
           <h1 className="about-us__context_title">
             Welcome to P&O International
           </h1>
-          <p className="about-us__context_subtitle">
-            Enhance lives with innovation, compassion, and excellence in
-            prosthetics and orthotics- that's the commitment P&O International
-            offers. The company was formed to be the market leader for
-            prosthetic design, fabrication, and fitting. In this business, we
-            assist clients in returning to their lifestyles and independence as
-            confidently as possible through custom-made prosthetic limbs and
-            orthotic solutions.
-          </p>
         </div>
         <div class="service__grid">
           <div class="service__card">

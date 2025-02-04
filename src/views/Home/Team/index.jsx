@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../../../styles/Home/Team/index.scss";
 import DoctorImg1 from "../../../assets/Home/Team/doctor-1.jpg";
 import DoctorImg2 from "../../../assets/Home/Team/doctor-2.jpg";
-import DoctorImg3 from "../../../assets/Home/Team/doctor-4.jpg";
+import DoctorImg3 from "../../../assets/Home/Team/doctor-3.jpg";
+import DoctorImg4 from "../../../assets/Home/Team/doctor-4.jpg";
 
 const Team = () => {
   const teamMembers = [
@@ -24,7 +25,7 @@ const Team = () => {
       designation: "P&O Professionals",
       imgSrc: DoctorImg3,
     },
-    // { id: 4, name: "John Doe", designation: "Senior Specialist", imgSrc: DoctorImg1 },
+    { id: 4, name: "Maninder Kaur", designation: "P&O Professionals", imgSrc: DoctorImg4 },
   ];
 
 
