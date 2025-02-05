@@ -11,6 +11,9 @@ import Contact from './pages/Contact';
 import Director from './pages/Director';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import Terms from './pages/Terms/Index';
+import Disclaimer from './pages/Disclaimer';
+import Privacy from './pages/Privacy';
 
 function App() {
   const [data, setData] = useState([]);
@@ -48,6 +51,9 @@ function App() {
             <Route exact path="/services" element={<Services />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/director" element={<Director />} />
+            <Route exact path="/Terms" element={<Terms />} />
+            <Route exact path="/Disclaimer" element={<Disclaimer />} />
+            <Route exact path="/Privacy" element={<Privacy />} />
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>
